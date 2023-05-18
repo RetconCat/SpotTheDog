@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:SpotTheDog"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid Background="DarkSlateGray">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Slider Grid.Row="0" Minimum="-100" Maximum="100" Name="XSlide"/>
+        <Slider Grid.Row="1" Minimum="-100" Maximum="100" Name="YSlide"/>
+        <Slider Grid.Row="2" Minimum="-1" Maximum="1" Name="ZSlide" MouseDoubleClick="ZSlide_MouseDoubleClick"/>
+        <Button Content="Calculate" Click="Button_Click" Grid.Row="3"/>
+        <TextBox Name="Status" Grid.Row="4" Text="0"/>
     </Grid>
 </Window>
